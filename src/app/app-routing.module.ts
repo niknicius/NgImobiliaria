@@ -1,11 +1,14 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 
-export const routes: Routes = [
-];
+import {NewClientComponent} from './views/client/NewClient/NewClientComponent';
 
-@NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
-})
-export class AppRoutingModule {}
+export const routes: Routes = [
+    { path: 'client/new', component:NewClientComponent }
+  ];
+
+  @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }
