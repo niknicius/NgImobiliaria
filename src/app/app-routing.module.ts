@@ -7,7 +7,7 @@ import {NewClientComponent} from './views/client/NewClient/NewClientComponent';
 
 export const routes: Routes = [
   {path: 'cliente/:id', component: ShowClientComponent},
-  { path: 'client/new', component:NewClientComponent },
+  {path: 'clientes/new', component: NewClientComponent },
   {path:'', component: AppComponent},
 ];
 

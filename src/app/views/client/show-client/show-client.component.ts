@@ -2,7 +2,6 @@ import { Cliente } from './../../../models/cliente';
 import { ClienteService } from './../../../services/cliente.service';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params } from '@angular/router';
-import { PromiseState, resolve } from 'q';
 
 
 
@@ -20,9 +19,12 @@ export class ShowClientComponent implements OnInit {
     private clienteservice: ClienteService) { }
 
   ngOnInit() {
-    /*this.route.params
-    .switchMap((params: Params) => this.loadCliente(+params['id']))
-    .subscribe((cliente: Cliente) => this.cliente = cliente); */
+    this.route.params.subscribe(params => {
+      let id = +params['id'];
+      this.cliente = this.clienteservice.getById(id);
+    }, error => {
+      alert('O cliente não foi identificado');
+    })
   }
 
   loadCliente(id: number): Promise<Cliente>{
