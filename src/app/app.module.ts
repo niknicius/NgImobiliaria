@@ -1,3 +1,4 @@
+import { ShowClientModule } from './views/client/show-client/show-client.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,6 +16,7 @@ import { NewClientComponent } from './views/client/NewClient/NewClientComponent'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ShowClientModule,
     ReactiveFormsModule,
     FormsModule
   ],

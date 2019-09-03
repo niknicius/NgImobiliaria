@@ -20,4 +20,9 @@ export class ClienteService {
     this.clientes.push(cliente);
     return cliente;
   }
+
+  public getById(id: number){
+        return this.clientes[id];
+    }
+
 }
