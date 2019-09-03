@@ -1,3 +1,4 @@
+import { ShowClientModule } from './views/client/show-client/show-client.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ShowClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
