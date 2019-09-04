@@ -1,6 +1,6 @@
 export class Cliente {
-  /*public id: number;
-  public nome: string;
+  public id: number;
+  /*public nome: string;
   public rg: number;
   public orgaoEx: string;
   public cadastro: string;
@@ -8,7 +8,7 @@ export class Cliente {
   public tipo: string;*/
 
   constructor(
-    nome: '',
+    nome: string,
     rg: number,
     orgaoEx: string,
     cadastro: string,

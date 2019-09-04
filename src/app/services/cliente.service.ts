@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Cliente} from '../models/cliente';
+import { Cliente } from '../models/cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class ClienteService {
 
 
   public add(cliente: Cliente) {
-    if (!cliente.id){
+    if (!cliente.id) {
       cliente.id = ++this.lastID;
     }
     this.clientes.push(cliente);
