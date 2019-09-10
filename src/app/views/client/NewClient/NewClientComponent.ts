@@ -39,7 +39,11 @@ export class NewClientComponent implements OnInit {
      const cliente = new Cliente(this.formCliente.value.nome, this.formCliente.value.rg,
         this.formCliente.value.orgaoEx, this.formCliente.value.cadastro,
         this.formCliente.value.telefone, this.formCliente.value.tipo);
-     this.clienteService.add(cliente);
+     console.log(this.clienteService.add(cliente));
+    }else {
+      console.log(this.formCliente.errors);
+  
     }
+
   }
 }
