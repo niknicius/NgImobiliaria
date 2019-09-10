@@ -10,7 +10,10 @@ export class ClienteService {
 
   clientes = [];
 
-  constructor() { }
+  constructor() {
+    let cliente = new Cliente ('Douglas', 8699111, 'SDS-PE', 'Cadastro', '83-996804048', 'Pessoa Física', 1);
+    this.add(cliente);
+   }
 
 
   public add(cliente: Cliente) {
@@ -20,4 +23,15 @@ export class ClienteService {
     this.clientes.push(cliente);
     return cliente;
   }
+
+  public getById(id: number){
+        for (let i = 0; i <= this.clientes.length; i++){
+          if (this.clientes[i].id == id){
+            return this.clientes[i];
+          }
+        }
+        throw new Error('ID Inválido');
+
+    }
+
 }
