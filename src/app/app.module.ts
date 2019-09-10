@@ -6,7 +6,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NewClientComponent } from './views/client/NewClient/NewClientComponent';
+import { NewClientComponent } from './views/client/new-client/new-client-component';
 
 @NgModule({
   declarations: [

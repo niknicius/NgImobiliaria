@@ -8,8 +8,8 @@ import { ClienteService } from '../../../services/cliente.service';
 
 @Component({
   selector: 'app-new-client',
-  templateUrl: './NewClientComponent.html',
-  styleUrls: ['./NewClientComponent.css']
+  templateUrl: './new-client-component.html',
+  styleUrls: ['./new-client-component.css']
 })
 
 
