@@ -3,7 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 
-import {NewClientComponent} from './views/client/NewClient/NewClientComponent';
+
+import {NewClientComponent} from './views/client/new-client/new-client-component';
 import { ListClientsComponent } from './views/client/list-clients/list-clients.component';
 
 export const routes: Routes = [
