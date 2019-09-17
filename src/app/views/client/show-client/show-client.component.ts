@@ -1,7 +1,7 @@
 import { Cliente } from './../../../models/cliente';
 import { ClienteService } from './../../../services/cliente.service';
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Params } from '@angular/router';
+import {ActivatedRoute, Params, Router } from '@angular/router';
 
 
 
@@ -16,6 +16,7 @@ export class ShowClientComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private clienteservice: ClienteService) { }
 
   ngOnInit() {
@@ -30,4 +31,10 @@ export class ShowClientComponent implements OnInit {
   loadCliente(id: number): Promise<Cliente>{
     return new Promise((resolve)=> resolve(this.clienteservice.getById(id)));
   }
+
+
+  edit(){
+  this.router.navigate(['/clientes', this.cliente.id, 'edit']);
+  return false;
+}
 }
