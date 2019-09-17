@@ -3,12 +3,15 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 
+
 import {NewClientComponent} from './views/client/new-client/new-client-component';
+import { ListClientsComponent } from './views/client/list-clients/list-clients.component';
 
 export const routes: Routes = [
   {path: 'cliente/:id', component: ShowClientComponent},
   {path: 'clientes/new', component: NewClientComponent },
-  {path:'', component: AppComponent},
+  {path: 'clientes',component: ListClientsComponent},
+  {path:'',  component: AppComponent},
 ];
 
 

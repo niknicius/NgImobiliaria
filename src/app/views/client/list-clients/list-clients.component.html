@@ -1,0 +1,30 @@
+<p>list-clients works!</p>
+<div class="container-fluid"><h1>Clientes <button href="#" type="button" class="btn btn-primary" (click)="create()">
+    Adicionar
+  </button></h1>
+  <div id="notificationMessage" *ngIf="clientes.length == 0" class="alert alert-danger" role="alert">
+      Lista de Clientes vazia
+    </div>
+  <table *ngIf="clientes.length >= 1" class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <th scope="row">{{cliente.id}}</th>
+          <td>{{cliente.nome}}</td>
+          <td>{{cliente.cpf}}</td>
+          <td><div class="btn-group-sm" role="group" aria-label="Basic example">
+              <button type="button" href="#" (click)="show(cliente.id)" class="btn btn-secondary">Visualizar</button>
+              <button type="button" href="#" (click)="edit(cliente.id)" class="btn btn-secondary">Editar</button>
+              <button type="button" href="#" (click)="destroy(cliente.id)" class="btn btn-secondary">Deletar</button>
+            </div></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
