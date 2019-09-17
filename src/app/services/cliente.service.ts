@@ -38,4 +38,13 @@ export class ClienteService {
 
     }
 
+    public update(clienteUpdate: Cliente){
+      for (let i = 0; i <= this.clientes.length; i++){
+        if (this.clientes[i].id == clienteUpdate.id){
+          this.clientes[i] = clienteUpdate;
+          console.log(this.clientes);
+          return "As informações do cliente foi alterada com sucesso";
+    }
+
 }
+    }}

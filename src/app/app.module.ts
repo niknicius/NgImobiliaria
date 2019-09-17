@@ -1,3 +1,4 @@
+import { EditClientModule } from './views/client/edit-client/edit-client.module';
 import { ShowClientModule } from './views/client/show-client/show-client.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,8 +22,10 @@ import { ListClientsModule } from './views/client/list-clients/list-clients.modu
     AppRoutingModule,
     ListClientsModule,
     ShowClientModule,
+    EditClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
