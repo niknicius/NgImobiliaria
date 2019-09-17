@@ -15,6 +15,10 @@ export class ClienteService {
     this.add(cliente);
    }
 
+   public getAll(){
+     return this.clientes;
+   }
+
 
   public add(cliente: Cliente) {
     if (!cliente.id) {

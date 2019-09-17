@@ -7,6 +7,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NewClientComponent } from './views/client/NewClient/NewClientComponent';
+import { ListClientsModule } from './views/client/list-clients/list-clients.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NewClientComponent } from './views/client/NewClient/NewClientComponent'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ListClientsModule,
     ShowClientModule,
     ReactiveFormsModule,
     FormsModule
