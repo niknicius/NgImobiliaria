@@ -31,5 +31,11 @@ export class NewClientComponent implements OnInit {
 
     // tslint:disable-next-line:semicolon
     })
+    
   }
+  
+  onSubmit(cliente: Cliente){
+  
+  }
+
 }

@@ -4,10 +4,12 @@ import {NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 
 import {NewClientComponent} from './views/client/NewClient/NewClientComponent';
+import { EditClientComponent } from './views/client/edit-client/edit-client.component';
 
 export const routes: Routes = [
-  {path: 'cliente/:id', component: ShowClientComponent},
+  {path: 'clientes/:id', component: ShowClientComponent},
   {path: 'clientes/new', component: NewClientComponent },
+  {path: 'clientes/:id/edit', component: EditClientComponent},
   {path:'', component: AppComponent},
 ];
 
