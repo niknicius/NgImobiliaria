@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Cliente } from '../../../models/cliente';
 import { ClienteService } from '../../../services/cliente.service';
@@ -17,19 +17,29 @@ export class NewClientComponent implements OnInit {
 
   formCliente: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router, private clienteService: ClienteService) { }
 
   ngOnInit() {
     this.formCliente = this.fb.group({
 
-      nome: [''],
-      rg: [''],
-      orgaoEx: [''],
-      cadastro: [''],
-      telefone: [''],
-      tipo: ['']
+      nome: [null, [Validators.required]],
+      rg: [null, [Validators.required]],
+      orgaoEx: [null, [Validators.required]],
+      cadastro: [null, [Validators.required]],
+      telefone: [null, [Validators.required]],
+      tipo: [null, [Validators.required]]
 
-    // tslint:disable-next-line:semicolon
+      // tslint:disable-next-line:semicolon
     })
+  }
+
+  onSubmit() {
+    if (this.formCliente.valid) {
+
+     const cliente = new Cliente(this.formCliente.value.nome, this.formCliente.value.rg,
+        this.formCliente.value.orgaoEx, this.formCliente.value.cadastro,
+        this.formCliente.value.telefone, this.formCliente.value.tipo);
+     this.clienteService.add(cliente);
+    }
   }
 }
